@@ -18,6 +18,7 @@ public class APIGatewayConfiguration {
 						.uri("http://httpbin.org:80"))
 				.route(p -> p.path("/currency-exchange/**").uri("lb://currency-exchange"))
 				.route(p -> p.path("/currency-conversion/**").uri("lb://CURRENCY-CONVERSION-SERVICE"))
+				.route(p -> p.path("/currency-conversion-feign/**").uri("lb://CURRENCY-CONVERSION-SERVICE"))
 				.build();
 	}
 }
